@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: #0E2151;
+    --color-primary-light: #1A3A7E;
+    --color-primary-muted: rgba(14, 33, 81, 0.08);
+
+    --color-accent: #F5A623;
+    --color-accent-dark: #D4861A;
+    --color-accent-light: rgba(245, 166, 35, 0.12);
+
+    --color-green: #16A34A;
+    --color-orange: #EA580C;
+    --color-red: #DC2626;
+
+    --color-bg: #F8F7F4;
+    --color-surface: #FFFFFF;
+    --color-text: #0E1117;
+    --color-text-muted: #4B5563;
+    --color-border: #E4E2DC;
+    --color-divider: #F0EEE8;
+
+    /* shadcn/ui variables */
+    --background: 45 33% 97%; /* #F8F7F4 in HSL */
+    --foreground: 220 24% 7%; /* #0E1117 */
+    --card: 0 0% 100%; /* #FFFFFF */
+    --card-foreground: 220 24% 7%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 24% 7%;
+    --primary: 223 70% 19%; /* #0E2151 */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 45 33% 97%; /* fallback to background */
+    --secondary-foreground: 223 70% 19%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 215 14% 34%; /* #4B5563 */
+    --accent: 38 92% 55%; /* #F5A623 */
+    --accent-foreground: 220 24% 7%;
+    --destructive: 0 84% 60%; /* #DC2626 */
+    --destructive-foreground: 0 0% 100%;
+    --border: 45 13% 88%; /* #E4E2DC */
+    --input: 45 13% 88%;
+    --ring: 38 92% 55%; /* Focus ring is accent color */
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground font-body;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+  }
+
+  /* Focus visible accessibility as requested */
+  :focus-visible { 
+    outline: 2px solid var(--color-accent) !important; 
+    outline-offset: 4px !important; 
+  }
+}
+
+@layer utilities {
+  .text-hero {
+    @apply text-4xl md:text-[56px] leading-[1.15] md:leading-[1.1];
+  }
+  .text-h1 {
+    @apply text-3xl md:text-[40px] leading-[1.25] md:leading-[1.2];
+  }
+  .text-h2 {
+    @apply text-2xl md:text-[30px] leading-[1.35] md:leading-[1.3];
+  }
+  .text-h3 {
+    @apply text-xl md:text-[22px] leading-[1.4];
+  }
+  .container-site {
+    @apply max-w-site mx-auto px-5 sm:px-12 lg:px-20;
+  }
+}
