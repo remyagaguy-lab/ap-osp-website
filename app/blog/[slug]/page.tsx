@@ -26,6 +26,8 @@ export async function generateStaticParams() {
   }));
 }
 
+export const revalidate = 60; // Revalidate cache every 60 seconds
+
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
   const { slug } = await params;
   const post = await getPostBySlug(slug);

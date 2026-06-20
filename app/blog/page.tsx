@@ -11,6 +11,8 @@ export const metadata: Metadata = {
   description: "Retrouvez les dernières actualités, conseils en orientation et événements de l'AP-OSP.",
 };
 
+export const revalidate = 60; // Revalidate cache every 60 seconds
+
 export default async function BlogPage() {
   const posts = await getPosts();
 

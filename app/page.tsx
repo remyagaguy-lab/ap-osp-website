@@ -8,6 +8,8 @@ import { PartnersSection } from "@/components/home/PartnersSection";
 import { BlogPreview } from "@/components/home/BlogPreview";
 import { CtaSection } from "@/components/home/CtaSection";
 
+export const revalidate = 60; // Revalidate cache every 60 seconds
+
 export default function Home() {
   return (
     <>
