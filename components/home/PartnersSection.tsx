@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const partners = [
-  { name: "Ministère des Enseignements Primaires et Secondaires (Togo)", logo: "/partners/meps-logo-new.jpg", imgClass: "scale-[2.2]", url: "https://education.gouv.tg/" },
+  { name: "Ministère des Enseignements Primaires et Secondaires (Togo)", url: "https://education.gouv.tg/" },
   { name: "Speed", logo: "/partners/speed-logo-transparent.png", imgClass: "scale-[2.0]" },
   { name: "CNT/EPT", logo: "/partners/cnt-ept-logo.jpg", imgClass: "scale-[1.4]", url: "https://cnt-ept.org/" },
   { name: "Alafiakultur Média", logo: "/partners/alafiakultur-logo.png", imgClass: "scale-110", url: "https://www.alafiakultur.tg/" },
